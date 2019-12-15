@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ElectronNET.API" Version="7.30.2" />
+  </ItemGroup>
+
+  <!-- We use postbuild.bat script to copy all the DIST static files from the Wasm Project -->
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo Executing $(ProjectDir)postbuild.bat for $(SolutionDir)UnoTest.Wasm using configuration $(Configuration)" ContinueOnError="false"/>
+    <Exec Command="$(ProjectDir)postbuild.bat $(SolutionDir)UnoTest.Wasm $(Configuration)" ContinueOnError="true" />
+  </Target>
+  
+  <!-- We now make sure that wwwroot is always being updated -->
+  <ItemGroup>
+    <Content Update="wwwroot\**\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="electron.manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
