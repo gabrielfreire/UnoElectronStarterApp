@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UnoTest.Shared.Services;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +23,12 @@ namespace UnoTest
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ToastService toastService = new ToastService();
         public MainPage()
         {
             this.InitializeComponent();
+            //toastService.Show("HELLO!!", true);
+
         }
     }
 }

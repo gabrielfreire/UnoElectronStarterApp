@@ -13,9 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoTest.UWP", "UnoTest.UWP\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoTest.Wasm", "UnoTest.Wasm\UnoTest.Wasm.csproj", "{17D93379-6D5B-4B53-80F2-7994F8BD2A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoTest.Server", "UnoTest.Server\UnoTest.Server.csproj", "{405EBB0F-6B58-4685-AB78-10A9AA986B72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoTest.Server", "UnoTest.Server\UnoTest.Server.csproj", "{405EBB0F-6B58-4685-AB78-10A9AA986B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoTest.Electron", "UnoTest.Electron\UnoTest.Electron.csproj", "{E2C9C3B8-14B1-4042-943D-E5BCF0F75196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnoTest.Electron", "UnoTest.Electron\UnoTest.Electron.csproj", "{E2C9C3B8-14B1-4042-943D-E5BCF0F75196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D8545BB-CB8A-4606-952B-8CAFAFE69369}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

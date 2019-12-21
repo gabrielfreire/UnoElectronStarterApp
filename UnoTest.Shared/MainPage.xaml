@@ -6,12 +6,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <NavigationView>
-        
-        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		    <TextBlock Text="Hello, world !" Margin="20" FontSize="30" />
-            <Button Name="btnClick" Content="Click" Margin="20" />
-        </StackPanel>
-    </NavigationView>
+        <NavigationView PaneDisplayMode="Left" >
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" x:Name="A" />
+                <NavigationViewItem Content="About" x:Name="B" />
+                <NavigationViewItem Content="Help" x:Name="C" />
+            </NavigationView.MenuItems>
+            <StackPanel>
+		        <TextBlock Text="Hello, world !" Margin="20" FontSize="30" />
+                <Button Name="btnClick" Content="Click" Margin="20" />
+            </StackPanel>
+        </NavigationView>
+    </Grid>
 </Page>

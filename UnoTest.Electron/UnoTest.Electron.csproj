@@ -8,7 +8,7 @@
 
   <!-- We use postbuild.bat script to copy all the DIST static files from the Wasm Project -->
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="echo Executing $(ProjectDir)prebuild.bat for $(SolutionDir)UnoTest.Wasm using configuration $(Configuration)" ContinueOnError="false"/>
+    <Exec Command="echo Executing $(ProjectDir)prebuild.bat for $(SolutionDir)UnoTest.Wasm using configuration $(Configuration)" ContinueOnError="true" />
     <Exec Command="$(ProjectDir)prebuild.bat $(SolutionDir)UnoTest.Wasm $(Configuration)" ContinueOnError="true" />
   </Target>
   
