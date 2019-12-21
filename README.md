@@ -1,8 +1,8 @@
 # Uno Platform + Electron
 ## Electron
-![Electron Picture](Assets/Electron_wasm.PNG)
+![Electron Picture](Assets/Electron_wasm.png)
 ## UWP
-![UWP Picture](Assets/UWP.PNG)
+![UWP Picture](Assets/uwp.png)
 
 This repository is composed of the default Uno Platform Starter template project and an extra Electron.NET that wraps the Uno WASM dist files. 
 
